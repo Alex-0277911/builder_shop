@@ -1,0 +1,21 @@
+@startuml
+set namespaceSeparator ::
+
+class "builder_shop::builder_shop.dart::Product" {
+  +String name
+  +double price
+  +String description
+}
+
+class "builder_shop::builder_shop.dart::ProductBuilder" {
+  +String name
+  +double price
+  +String description
+  +ProductBuilder setName()
+  +ProductBuilder setPrice()
+  +ProductBuilder setDescription()
+  +Product build()
+}
+
+
+@enduml

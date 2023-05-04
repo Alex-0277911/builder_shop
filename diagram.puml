@@ -1,20 +1,26 @@
 @startuml
 set namespaceSeparator ::
 
-class "builder_shop::builder_shop.dart::Product" {
-  +String name
-  +double price
-  +String description
+class "builder_shop::builder_pizza.dart::PizzaBuilder" {
+  -String _crust
+  -int _diameter
+  -Set<String> _toppings
+  +String crust
+  +int diameter
+  +Set<String> toppings
+  -void _ensureCheese()
+  +Pizza build()
 }
 
-class "builder_shop::builder_shop.dart::ProductBuilder" {
-  +String name
-  +double price
-  +String description
-  +ProductBuilder setName()
-  +ProductBuilder setPrice()
-  +ProductBuilder setDescription()
-  +Product build()
+class "builder_shop::builder_pizza.dart::Pizza" {
+  -String _crust
+  -int _diameter
+  -Set<String> _toppings
+  +String crust
+  +int diameter
+  +String toppings
+  -String _stringifiedToppings()
+  +String toString()
 }
 
 
